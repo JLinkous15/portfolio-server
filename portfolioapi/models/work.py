@@ -10,3 +10,4 @@ class Work(models.Model):
         to='WorkType', on_delete=models.CASCADE, related_name='works')
     materials = models.ManyToManyField(to='Material', related_name='works')
     links = models.ManyToManyField(to='Link', related_name='works')
+    is_published = models.BooleanField(default=False)
